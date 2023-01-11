@@ -5,7 +5,7 @@
     <ProjectGuid>{9bd59543-f18e-404d-8392-69b6d8f30d0d}</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>daily.py</StartupFile>
+    <StartupFile>15. 3Sum.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,12 +22,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="134. Gas Station.py" />
+    <Compile Include="144. Binary Tree Preorder Traversal.py" />
+    <Compile Include="149. Max Points on a Line-Least square.py" />
+    <Compile Include="15. 3Sum.py" />
+    <Compile Include="153. Find Minimum in Rotated Sorted Array.py" />
+    <Compile Include="162. Find Peak Element.py" />
     <Compile Include="1834. Single-Threaded CPU.py" />
     <Compile Include="1962_remove_stones.py" />
     <Compile Include="198. House Robber.py" />
     <Compile Include="2279. Maximum Bags With Full Capacity of Rocks.py" />
     <Compile Include="2515_circularstring.py" />
     <Compile Include="290. Word Pattern.py" />
+    <Compile Include="33. Search in Rotated Sorted Array.py" />
     <Compile Include="34_Binary_adv.py" />
     <Compile Include="3_Longest_string.py" />
     <Compile Include="542. 01 Dynamic_programming.py" />
@@ -36,10 +43,12 @@
     <Compile Include="70. Climbing Stairs.py" />
     <Compile Include="733_floodfill.py" />
     <Compile Include="797. All Paths From Source to Target.py" />
+    <Compile Include="82. Remove Duplicates from Sorted List II.py" />
     <Compile Include="980. Unique Paths III.py" />
     <Compile Include="994. Rotting Oranges.py" />
     <Compile Include="120. Triangle.py" />
-    <Compile Include="daily.py" />
+    <Compile Include="74. Search a 2D Matrix.py" />
+    <Compile Include="Class contest.py" />
     <Compile Include="Dprimes.py" />
     <Compile Include="forts.py" />
     <Compile Include="linked2k.py" />
