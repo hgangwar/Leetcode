@@ -1,5 +1,4 @@
 import math
-
 class Node(object):
     def __init__(self, val=0, left=None, right=None, next=None):
         self.val = val

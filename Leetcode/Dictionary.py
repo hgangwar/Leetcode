@@ -1,6 +1,3 @@
-from re import I
-
-
 class Solution(object):
     def twoSum(self, numbers, target):
         l=len(numbers)
