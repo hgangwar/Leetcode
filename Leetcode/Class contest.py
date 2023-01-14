@@ -1,5 +1,4 @@
 class DataStream(object):
-
     def __init__(self, value, k):
         """
         :type value: int
