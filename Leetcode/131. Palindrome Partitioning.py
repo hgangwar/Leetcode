@@ -14,5 +14,5 @@ class Solution:
         return ans
 if __name__ == "__main__":
     obj=Solution()
-    Op=obj.partition("aab")
+    Op=obj.partition("aabab")
     print(Op)
