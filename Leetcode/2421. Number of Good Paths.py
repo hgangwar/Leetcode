@@ -21,8 +21,6 @@ class DSU:
             self.p[py] = px
         self.e += 1
         return 0
-
-
 class Solution:
     def numberOfGoodPaths(self, vals, edges):
         n = len(vals)
@@ -31,18 +29,15 @@ class Solution:
         for u, v in edges:
             e[u].append(v)
             e[v].append(u)
-
         value_indices = defaultdict(list)
         for i, v in enumerate(vals):
             value_indices[v].append(i)
-
         ans = n
         for v in sorted(value_indices.keys()):
             for i in value_indices[v]:
                 for j in e[i]:
                     if vals[j] <= v:
                         uf.union(i, j)
-
             c = Counter()
             for i in value_indices[v]:
                 p = uf.find(i)
@@ -51,7 +46,6 @@ class Solution:
             for _, count in c.items():
                 if count > 1:
                     ans += count * (count - 1) // 2
-
         return ans
 if __name__ == "__main__":
     obj=Solution()

@@ -1,4 +1,3 @@
-from collections import defaultdict
 class Solution(object):    
     def smallestEquivalentString(self, s1, s2, baseStr):
         graph=dict()

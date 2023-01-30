@@ -20,32 +20,3 @@ if __name__ == "__main__":
     root2=build(arr2)
     M_root=obj.mergeTrees(root1, root2)
     print(M_root)
-
-
-
-    """
-    level,index=0,1
-    def createTree(root,arr,level,index):
-        if (len(arr)>index):
-            root.left=TreeNode(arr[index])
-        createTree(root.left,level+1,index+(2**level))
-        if (len(arr)>index+1):
-            root.right=TreeNode(arr[index+1])        
-        createTree(root.right,level+1,index+(2**level))
-    createTree(root,arr,level,index)
-       
-    temp=obj.traverseTree(real_root,[])
-    print(temp)
-
-    def traverseTree(self, root,arr=[]):
-        arr.append(root.val)
-        if(root.left!=None):
-            arr.append(root.left.val)
-        if(root.right!=None):
-            arr.append(root.right.val)
-        if(root.left!=None):
-            arr=self.traverseTree(root.left,arr)
-        if(root.right!=None):
-            arr=self.traverseTree(root.left,arr)
-        return arr
-    """
