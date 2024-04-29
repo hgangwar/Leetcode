@@ -1,32 +1,27 @@
-import heapq
-from collections import defaultdict
 class Solution(object):
-    def networkDelayTime(self, times, n,k):
-        def dijkstra(graph, start):
-            distances = [float('infinity') for i in range(n)]
-            distances[start-1] = 0
-            queue = [(0, start)]
-            while queue:
-                current_distance, current_vertex = heapq.heappop(queue)
-                if current_distance > distances[current_vertex-1]:
-                    continue
-                for neighbor, weight in graph[current_vertex]:
-                    distance = current_distance + weight
-                    if distance < distances[neighbor-1]:
-                        distances[neighbor-1] = distance
-                        heapq.heappush(queue, (distance, neighbor))
-            return distances
+    def networkDelayTime(self, times, n, k):
+        import heapq as hq
+        from collections import defaultdict
         graph=defaultdict(list)
         for x in times:
-            graph[x[0]]+=[x[1:]]
-        shortestpath=dijkstra(graph,k)
-        ans=max(shortestpath)
-        if n!=len(shortestpath) or ans==float('infinity'): return -1
-        return  ans
+            graph[x[0]]+=[(x[1], x[2])]
+        dist=[float('infinity') for x in range(n)]
+        heap=[(k,0)]
+        dist[k-1]=0
+        hq.heapify(heap)
+        while(heap):
+            node, time=hq.heappop(heap)
+            for child, weight in graph[node]:
+                new_weight=time+weight
+                if (new_weight<dist[child-1]):
+                    hq.heappush(heap,(child, new_weight))
+                    dist[child-1]=new_weight
+        max_time= max(dist)
+        if max_time==float('infinity'):
+            return -1
+        print(dist)
+        return max_time
 if __name__ == "__main__":
     obj=Solution()
-    times = [[2,1,1],[2,3,1],[3,4,1]] 
-    n = 4 
-    k = 2
-    Op=obj.networkDelayTime(times,n,k)
+    Op=obj.networkDelayTime(times = [[1,2,1]], n = 2, k = 2)
     print(Op)
